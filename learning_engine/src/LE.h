@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 #include "learning_engine/Application.h"
+#include "learning_engine/Log.h"
 
 // --Entry Point---------------
 #include "learning_engine/EntryPoint.h"

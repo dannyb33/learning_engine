@@ -1,36 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="learning_engine">
+      <UniqueIdentifier>{AA6B9751-16F7-0416-1F08-880A8B126116}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="learning_engine\Events">
+      <UniqueIdentifier>{4E14DEF4-3A0E-0747-237B-9D570F146DB3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\learning_engine\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\LE.h" />
     <ClInclude Include="src\learning_engine\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>learning_engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\LE.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\learning_engine\Core.h">
+      <Filter>learning_engine</Filter>
     </ClInclude>
     <ClInclude Include="src\learning_engine\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>learning_engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learning_engine\Events\Event.h">
+      <Filter>learning_engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learning_engine\Events\KeyEvent.h">
+      <Filter>learning_engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learning_engine\Log.h">
+      <Filter>learning_engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\learning_engine\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>learning_engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\learning_engine\Log.cpp">
+      <Filter>learning_engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
