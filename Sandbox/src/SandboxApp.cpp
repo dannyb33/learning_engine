@@ -1,3 +1,4 @@
+#include "sbpch.h"
 #include <LE.h>
 
 class Sandbox : public le::Application
@@ -10,7 +11,7 @@ public:
 
 	}
 
-};
+}; 
 
 le::Application* le::CreateApplication() {
 	return new Sandbox();

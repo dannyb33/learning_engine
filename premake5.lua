@@ -18,6 +18,9 @@ project "learning_engine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "lepch.h"
+    pchsource "learning_engine/src/lepch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -67,6 +70,9 @@ project "Sandbox"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    pchheader "sbpch.h"
+    pchsource "Sandbox/src/sbpch.cpp"
 
     files
     {

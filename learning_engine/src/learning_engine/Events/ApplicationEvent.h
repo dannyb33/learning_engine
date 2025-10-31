@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace le {
 
 	class LE_API WindowResizeEvent : public Event

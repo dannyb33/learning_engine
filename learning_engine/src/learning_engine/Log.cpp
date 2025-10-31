@@ -1,3 +1,5 @@
+#include "lepch.h"
+
 #include "Log.h"
 
 namespace le {
