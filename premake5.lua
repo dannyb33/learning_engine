@@ -10,6 +10,11 @@ workspace "learning_engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "learning_engine/vendor/GLFW/include"
+
+include "learning_engine/vendor/GLFW"
+
 project "learning_engine"
     location "learning_engine"
     kind "SharedLib"
@@ -24,13 +29,20 @@ project "learning_engine"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
     }
 
     includedirs
     {
         "%{prj.name}/vendor/spdlog/include",
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        "%{IncludeDir.GLFW}",
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib",
     }
 
     filter "system:windows"

@@ -2,6 +2,7 @@
 
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
 #include "Log.h"
 
 namespace le {
@@ -16,13 +17,14 @@ namespace le {
 
 	void Application::Run() {
 		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		KeyPressedEvent k(6, 7);
+		if (k.IsInCategory(EventCategoryApplication))
 		{
-			LE_TRACE(e.ToString());
+			LE_TRACE(k.ToString());
 		}
-		if (e.IsInCategory(EventCategoryInput))
+		if (k.IsInCategory(EventCategoryInput))
 		{
-			LE_TRACE(e.ToString());
+			LE_TRACE(k.ToString());
 		}
 
 		while (true);
