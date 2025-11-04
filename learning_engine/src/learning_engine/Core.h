@@ -8,7 +8,14 @@
 	#endif
 #else
 	#error LE only supports windows!
+#endif
 
+#ifdef LE_ENABLE_ASSERTS
+	#define LE_ASSERT(x, ...) { if(!(x)) { HZ_ERROR("Assertion failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define LE_CORE_ASSERT(x, ...) { if(!(x)) { HZ_ERROR("Assertion failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define LE_ASSERT(x, ...)
+	#define LE_CORE_ASSERT(x, ...)
 #endif
 
 #define BIT(x) (1 << x)

@@ -45,6 +45,11 @@ project "learning_engine"
         "opengl32.lib",
     }
 
+    dependson
+    {
+        "GLFW"
+    }
+
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
@@ -53,7 +58,8 @@ project "learning_engine"
         defines
         {
             "LE_PLATFORM_WINDOWS",
-            "LE_BUILD_DLL"
+            "LE_BUILD_DLL",
+            "GLFW_STATIC"
         }
 
         buildoptions { "/utf-8" }

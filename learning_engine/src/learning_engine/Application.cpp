@@ -7,8 +7,9 @@
 
 namespace le {
 
-	Application::Application() {
-
+	Application::Application() 
+	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application() {
@@ -16,17 +17,10 @@ namespace le {
 	}
 
 	void Application::Run() {
-		WindowResizeEvent e(1280, 720);
-		KeyPressedEvent k(6, 7);
-		if (k.IsInCategory(EventCategoryApplication))
-		{
-			LE_TRACE(k.ToString());
-		}
-		if (k.IsInCategory(EventCategoryInput))
-		{
-			LE_TRACE(k.ToString());
-		}
 
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }

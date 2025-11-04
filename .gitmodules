@@ -1,6 +1,3 @@
 [submodule "learning_engine/vendor/spdlog"]
 	path = learning_engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "learning_engine/vendor/GLFW"]
-	path = learning_engine/vendor/GLFW
-	url = git@github.com:dannyb33/glfw.git
