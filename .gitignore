@@ -5,3 +5,4 @@ bin-int/
 
 # Files
 *.user
+/learning_engine/src/learning_engine/Window.h
